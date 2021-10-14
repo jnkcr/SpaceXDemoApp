@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 
 struct ListView: View {
@@ -24,6 +25,15 @@ struct ListView: View {
 extension ListView {
     
     func downloadData() {
+        
+        AF.request("https://api.spacexdata.com/v5/launches/past", method: .get).responseData { response in
+            switch response.result {
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         
     }
     
