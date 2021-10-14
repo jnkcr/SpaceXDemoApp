@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F4599B622718B12300932208 /* SpaceXDemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */; };
-		F4599B642718B12300932208 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B632718B12300932208 /* ContentView.swift */; };
 		F4599B662718B12400932208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4599B652718B12400932208 /* Assets.xcassets */; };
 		F4599B692718B12400932208 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4599B682718B12400932208 /* Preview Assets.xcassets */; };
 		F4599B732718B12400932208 /* SpaceXDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B722718B12400932208 /* SpaceXDemoAppTests.swift */; };
 		F4599B7D2718B12400932208 /* SpaceXDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B7C2718B12400932208 /* SpaceXDemoAppUITests.swift */; };
 		F4599B7F2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */; };
 		F4599B8D2718B42700932208 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4599B8C2718B42700932208 /* Alamofire */; };
+		F4599B8F2718B7A900932208 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B8E2718B7A900932208 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		F4599B5E2718B12300932208 /* SpaceXDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppApp.swift; sourceTree = "<group>"; };
-		F4599B632718B12300932208 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4599B652718B12400932208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4599B682718B12400932208 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4599B6E2718B12400932208 /* SpaceXDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +44,7 @@
 		F4599B782718B12400932208 /* SpaceXDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4599B7C2718B12400932208 /* SpaceXDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppUITests.swift; sourceTree = "<group>"; };
 		F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4599B8E2718B7A900932208 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */,
-				F4599B632718B12300932208 /* ContentView.swift */,
+				F4599B8E2718B7A900932208 /* ListView.swift */,
 				F4599B652718B12400932208 /* Assets.xcassets */,
 				F4599B672718B12400932208 /* Preview Content */,
 			);
@@ -265,8 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4599B642718B12300932208 /* ContentView.swift in Sources */,
 				F4599B622718B12300932208 /* SpaceXDemoAppApp.swift in Sources */,
+				F4599B8F2718B7A900932208 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
