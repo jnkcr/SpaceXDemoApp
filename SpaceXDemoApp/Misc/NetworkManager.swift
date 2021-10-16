@@ -17,7 +17,12 @@ final class NetworkManager {
         AF.request("https://api.spacexdata.com/v5/launches/past", method: .get).responseData { response in
             switch response.result {
             case .success(let data):
-                guard !data.isEmpty else { return }
+                // Early check - downloaded data should not be empty
+                guard !(data.isEmpty) else {
+                    completion(nil)
+                    return
+                }
+                // Decode data to model
                 do {
                     let currentLaunches = try JSONDecoder().decode([LaunchModel].self, from: data)
                     dump(currentLaunches)
