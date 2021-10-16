@@ -11,13 +11,17 @@ import Alamofire
 
 final class ListViewModel: ObservableObject {
     
+    
     @Published var launches: [LaunchModel] = [LaunchModel]()
+    @Published var textForSearching: String = ""
     
     private let networkManager: NetworkManager = NetworkManager()
+    
     
     init() {
         downloadLaunches()
     }
+    
     
 }
 

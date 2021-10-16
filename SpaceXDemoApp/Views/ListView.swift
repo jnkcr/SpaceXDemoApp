@@ -27,7 +27,7 @@ struct ListView: View {
                 }
                 .listRowSeparator(.hidden)
             } else {
-                ForEach(listViewModel.launches) { launch in
+                ForEach(launches) { launch in
                     Text(launch.name)
                 }
                 .listRowSeparator(.hidden)
@@ -35,10 +35,24 @@ struct ListView: View {
         }
         .listStyle(.plain)
         .refreshable { listViewModel.downloadLaunches() }
+        .searchable(text: $listViewModel.textForSearching)
         .navigationTitle("SpaceX launches")
         
     }
     
+    
+}
+
+
+extension ListView {
+    
+    private var launches: [LaunchModel] {
+        if listViewModel.textForSearching.isEmpty {
+            return listViewModel.launches
+        } else {
+            return listViewModel.launches.filter { $0.name.lowercased().contains(listViewModel.textForSearching.lowercased()) }
+        }
+    }
     
 }
 
