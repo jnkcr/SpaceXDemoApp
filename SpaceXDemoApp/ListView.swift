@@ -31,7 +31,7 @@ extension ListView {
             case .success(let data):
                 guard !data.isEmpty else { return }
                 do {
-                    let lunches = try JSONDecoder().decode([LunchModel].self, from: data)
+                    let lunches = try JSONDecoder().decode([LaunchModel].self, from: data)
                     dump(lunches)
                 } catch {
                     print(error.localizedDescription)

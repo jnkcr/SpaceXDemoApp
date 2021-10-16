@@ -15,7 +15,7 @@
 		F4599B7F2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */; };
 		F4599B8D2718B42700932208 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4599B8C2718B42700932208 /* Alamofire */; };
 		F4599B8F2718B7A900932208 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B8E2718B7A900932208 /* ListView.swift */; };
-		F4F44BD9271ACFC10067C187 /* LunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F44BD8271ACFC10067C187 /* LunchModel.swift */; };
+		F4F44BD9271ACFC10067C187 /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F44BD8271ACFC10067C187 /* LaunchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		F4599B7C2718B12400932208 /* SpaceXDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppUITests.swift; sourceTree = "<group>"; };
 		F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4599B8E2718B7A900932208 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		F4F44BD8271ACFC10067C187 /* LunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchModel.swift; sourceTree = "<group>"; };
+		F4F44BD8271ACFC10067C187 /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			children = (
 				F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */,
 				F4599B8E2718B7A900932208 /* ListView.swift */,
-				F4F44BD8271ACFC10067C187 /* LunchModel.swift */,
+				F4F44BD8271ACFC10067C187 /* LaunchModel.swift */,
 				F4599B652718B12400932208 /* Assets.xcassets */,
 				F4599B672718B12400932208 /* Preview Content */,
 			);
@@ -268,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F44BD9271ACFC10067C187 /* LunchModel.swift in Sources */,
+				F4F44BD9271ACFC10067C187 /* LaunchModel.swift in Sources */,
 				F4599B622718B12300932208 /* SpaceXDemoAppApp.swift in Sources */,
 				F4599B8F2718B7A900932208 /* ListView.swift in Sources */,
 			);

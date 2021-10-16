@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct LunchModel: Codable, Identifiable {
+struct LaunchModel: Codable, Identifiable {
     let id: String
     let name: String
     let date_utc: String
