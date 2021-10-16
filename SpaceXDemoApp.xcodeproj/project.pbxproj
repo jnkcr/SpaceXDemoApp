@@ -101,9 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */,
-				F4599B8E2718B7A900932208 /* ListView.swift */,
-				F4F44BDA271B1F190067C187 /* ListViewModel.swift */,
-				F4F44BD8271ACFC10067C187 /* LaunchModel.swift */,
+				F4F44BDD271B2BF50067C187 /* Views */,
+				F4F44BDC271B2BE60067C187 /* Models */,
 				F4599B652718B12400932208 /* Assets.xcassets */,
 				F4599B672718B12400932208 /* Preview Content */,
 			);
@@ -133,6 +132,23 @@
 				F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */,
 			);
 			path = SpaceXDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		F4F44BDC271B2BE60067C187 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4F44BDA271B1F190067C187 /* ListViewModel.swift */,
+				F4F44BD8271ACFC10067C187 /* LaunchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4F44BDD271B2BF50067C187 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4599B8E2718B7A900932208 /* ListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
