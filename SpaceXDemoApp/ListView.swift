@@ -29,7 +29,13 @@ extension ListView {
         AF.request("https://api.spacexdata.com/v5/launches/past", method: .get).responseData { response in
             switch response.result {
             case .success(let data):
-                print(data)
+                guard !data.isEmpty else { return }
+                do {
+                    let lunches = try JSONDecoder().decode([LunchModel].self, from: data)
+                    dump(lunches)
+                } catch {
+                    print(error.localizedDescription)
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
