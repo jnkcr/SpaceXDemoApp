@@ -14,7 +14,9 @@ struct SpaceXDemoAppApp: App {
         
         WindowGroup {
             
-            ListView()
+            NavigationView {
+                ListView()
+            }
             
         }
         

@@ -12,9 +12,13 @@ import Alamofire
 struct ListView: View {
     
     
+    @StateObject var listViewModel: ListViewModel = ListViewModel()
+    
+    
     var body: some View {
         
         Text("SpaceX launches")
+            .navigationTitle("SpaceX launches")
         
     }
     
