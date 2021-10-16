@@ -13,8 +13,13 @@ final class ListViewModel: ObservableObject {
     
     @Published var launches: [LaunchModel] = [LaunchModel]()
     
+    private let networkManager: NetworkManager = NetworkManager()
+    
     init() {
-        downloadLaunches()
+        networkManager.downloadLaunches { launches in
+            guard let newLaunches = launches else { return }
+            self.launches = newLaunches
+        }
     }
     
 }
@@ -22,25 +27,6 @@ final class ListViewModel: ObservableObject {
 
 extension ListViewModel {
     
-    /// Downloads all past launches from given api URL
-    func downloadLaunches() {
-        
-        AF.request("https://api.spacexdata.com/v5/launches/past", method: .get).responseData { response in
-            switch response.result {
-            case .success(let data):
-                guard !data.isEmpty else { return }
-                do {
-                    let currentLaunches = try JSONDecoder().decode([LaunchModel].self, from: data)
-                    self.launches = currentLaunches
-                    dump(currentLaunches)
-                } catch {
-                    print(error.localizedDescription)
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
-    }
+    
     
 }
