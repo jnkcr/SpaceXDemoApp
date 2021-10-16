@@ -17,8 +17,24 @@ struct ListView: View {
     
     var body: some View {
         
-        Text("SpaceX launches")
-            .navigationTitle("SpaceX launches")
+        List {
+            if listViewModel.launches.isEmpty {
+                HStack {
+                    ProgressView()
+                        .padding(.trailing)
+                    Text("Downloading launches..")
+                    Spacer()
+                }
+                .listRowSeparator(.hidden)
+            } else {
+                ForEach(listViewModel.launches) { launch in
+                    Text(launch.name)
+                }
+                .listRowSeparator(.hidden)
+            }
+        }
+        .listStyle(.plain)
+        .navigationTitle("SpaceX launches")
         
     }
     
