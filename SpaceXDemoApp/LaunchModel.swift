@@ -11,12 +11,11 @@ import Foundation
 struct LaunchModel: Codable, Identifiable {
     let id: String
     let name: String
-    let date_utc: String
-    let date_unix: Int
-    let date_local: String
-    let date_precision: DatePrecision
-    let static_fire_date_utc: String?
-    let static_fire_date_unix: Int?
+    let dateUnix: Int
+    let dateLocal: String
+    let datePrecision: DatePrecision
+    let staticFireDateUTC: String?
+    let staticFireDateUNIX: Int?
     let tbd: Bool
     let net: Bool
     let window: Int?
@@ -32,9 +31,18 @@ struct LaunchModel: Codable, Identifiable {
     let launchpad: String?
     let cores: [Core]
     let links: Links
-    let auto_update: Bool
+    let autoUpdate: Bool
     let success: Bool
     
+    enum CodingKeys: String, CodingKey {
+        case id, name, tbd, net, window, rocket, failures, upcoming, details, fairings, crew, ships, capsules, payloads, launchpad, cores, links, success
+        case dateUnix = "date_unix"
+        case dateLocal = "date_local"
+        case datePrecision = "date_precision"
+        case staticFireDateUTC = "static_fire_date_utc"
+        case staticFireDateUNIX = "static_fire_date_unix"
+        case autoUpdate = "auto_update"
+    }
 }
 
 enum DatePrecision: String, Codable {
@@ -63,10 +71,17 @@ struct Core: Codable {
     let gridfins: Bool?
     let legs: Bool?
     let reused: Bool?
-    let landing_attempt: Bool?
-    let landing_success: Bool?
-    let landing_type: String?
+    let landingAttempt: Bool?
+    let landingSuccess: Bool?
+    let landingType: String?
     let landpad: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case core, flight, gridfins, legs, reused, landpad
+        case landingAttempt = "landing_attempt"
+        case landingSuccess = "landing_success"
+        case landingType = "landing_type"
+    }
 }
 
 struct Links: Codable {
@@ -75,9 +90,14 @@ struct Links: Codable {
     let flickr: Flickr
     let presskit: String?
     let webcast: String?
-    let youtube_id: String?
+    let youtubeId: String?
     let article: String?
     let wikipedia: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case patch, reddit, flickr, presskit, webcast, article, wikipedia
+        case youtubeId = "youtube_id"
+    }
 }
 
 struct Patch: Codable {
