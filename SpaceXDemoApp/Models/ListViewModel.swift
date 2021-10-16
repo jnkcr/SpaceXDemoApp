@@ -16,10 +16,7 @@ final class ListViewModel: ObservableObject {
     private let networkManager: NetworkManager = NetworkManager()
     
     init() {
-        networkManager.downloadLaunches { launches in
-            guard let newLaunches = launches else { return }
-            self.launches = newLaunches
-        }
+        downloadLaunches()
     }
     
 }
@@ -27,6 +24,11 @@ final class ListViewModel: ObservableObject {
 
 extension ListViewModel {
     
-    
+    func downloadLaunches() {
+        networkManager.downloadPastLaunches { launches in
+            guard let newLaunches = launches else { return }
+            self.launches = newLaunches
+        }
+    }
     
 }

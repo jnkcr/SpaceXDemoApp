@@ -34,6 +34,7 @@ struct ListView: View {
             }
         }
         .listStyle(.plain)
+        .refreshable { listViewModel.downloadLaunches() }
         .navigationTitle("SpaceX launches")
         
     }

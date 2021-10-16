@@ -12,7 +12,7 @@ import Alamofire
 final class NetworkManager {
     
     /// Downloads all past launches from given api URL
-    func downloadLaunches(completion: @escaping ([LaunchModel]?) -> Void) {
+    func downloadPastLaunches(completion: @escaping ([LaunchModel]?) -> Void) {
         
         AF.request("https://api.spacexdata.com/v5/launches/past", method: .get).responseData { response in
             switch response.result {
