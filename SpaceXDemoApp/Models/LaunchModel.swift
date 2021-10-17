@@ -11,6 +11,7 @@ import Foundation
 struct LaunchModel: Codable, Identifiable {
     let id: String
     let name: String
+    let dateUTC: String
     let dateUnix: Int
     let dateLocal: String
     let datePrecision: DatePrecision
@@ -36,6 +37,7 @@ struct LaunchModel: Codable, Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case id, name, tbd, net, window, rocket, failures, upcoming, details, fairings, crew, ships, capsules, payloads, launchpad, cores, links, success
+        case dateUTC = "date_utc"
         case dateUnix = "date_unix"
         case dateLocal = "date_local"
         case datePrecision = "date_precision"
