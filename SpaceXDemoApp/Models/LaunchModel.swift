@@ -15,6 +15,7 @@ struct LaunchModel: Codable, Identifiable {
     let dateUnix: Int
     let dateLocal: String
     let datePrecision: DatePrecision
+    let flightNumber: Int
     let staticFireDateUTC: String?
     let staticFireDateUNIX: Int?
     let tbd: Bool
@@ -41,6 +42,7 @@ struct LaunchModel: Codable, Identifiable {
         case dateUnix = "date_unix"
         case dateLocal = "date_local"
         case datePrecision = "date_precision"
+        case flightNumber = "flight_number"
         case staticFireDateUTC = "static_fire_date_utc"
         case staticFireDateUNIX = "static_fire_date_unix"
         case autoUpdate = "auto_update"

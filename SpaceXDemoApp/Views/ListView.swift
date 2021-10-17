@@ -37,6 +37,21 @@ struct ListView: View {
         .refreshable { listViewModel.downloadLaunches() }
         .searchable(text: $listViewModel.textForSearching)
         .navigationTitle("SpaceX launches")
+        .toolbar {
+            Button {
+                listViewModel.isActionSheetShown = true
+            } label: {
+                Label("Sort", systemImage: "list.number")
+            }
+        }
+        .confirmationDialog("Sort results by:", isPresented: $listViewModel.isActionSheetShown) {
+            Button("Name") {
+                listViewModel.sortLaunches(by: 0)
+            }
+            Button("Date") {
+                listViewModel.sortLaunches(by: 1)
+            }
+        }
         
     }
     

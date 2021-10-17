@@ -16,6 +16,7 @@ final class ListViewModel: ObservableObject {
     
     @Published var launches: [LaunchModel] = [LaunchModel]()
     @Published var textForSearching: String = ""
+    @Published var isActionSheetShown: Bool = false
     
     private let networkManager: NetworkManager = NetworkManager()
     
