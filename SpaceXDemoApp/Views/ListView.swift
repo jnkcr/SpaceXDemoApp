@@ -51,6 +51,9 @@ struct ListView: View {
             Button("Date") {
                 listViewModel.sortLaunches(by: 1)
             }
+            Button("Flight number") {
+                listViewModel.sortLaunches(by: 2)
+            }
         }
         
     }

@@ -49,10 +49,10 @@ extension ListViewModel {
     
     private func sortLaunches(_ givenLaunches: [LaunchModel]) -> [LaunchModel] {
         switch sortingOrder {
-        case 0:
-            return givenLaunches.sorted { $0.name < $1.name }
         case 1:
             return givenLaunches.sorted { $0.dateUTC < $1.dateUTC }
+        case 2:
+            return givenLaunches.sorted { $0.flightNumber < $1.flightNumber }
         default:
             return givenLaunches.sorted { $0.name < $1.name }
         }
