@@ -28,7 +28,7 @@ struct ListView: View {
                 .listRowSeparator(.hidden)
             } else {
                 ForEach(launches) { launch in
-                    Text(launch.name)
+                    ListCell(launch: launch)
                 }
                 .listRowSeparator(.hidden)
             }
