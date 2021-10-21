@@ -15,7 +15,25 @@ struct ListCell: View {
     
     var body: some View {
         
-        Text(launch.name)
+        VStack(alignment: .leading) {
+            Text(formattedDate)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            Text(launch.name)
+                .fontWeight(.medium)
+                .font(.title3)
+        }
+        
+    }
+    
+}
+
+extension ListCell {
+    
+    var formattedDate: String {
+        let formatter = ISO8601DateFormatter()
+        guard let date = formatter.date(from: launch.dateLocal) else { return "n/a" }
+        return date.formatted(date: .abbreviated, time: .omitted)
         
     }
     
