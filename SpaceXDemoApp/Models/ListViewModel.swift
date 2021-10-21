@@ -29,6 +29,7 @@ final class ListViewModel: ObservableObject {
 }
 
 
+// MARK: Downloading launches
 extension ListViewModel {
     
     func downloadLaunches() {
@@ -40,6 +41,8 @@ extension ListViewModel {
     
 }
 
+
+// MARK: Sorting launches
 extension ListViewModel {
     
     func sortLaunches(by key: Int) {
@@ -50,7 +53,7 @@ extension ListViewModel {
     private func sortLaunches(_ givenLaunches: [LaunchModel]) -> [LaunchModel] {
         switch sortingOrder {
         case 1:
-            return givenLaunches.sorted { $0.dateUTC < $1.dateUTC }
+            return givenLaunches.sorted { $0.dateUTC > $1.dateUTC }
         case 2:
             return givenLaunches.sorted { $0.flightNumber < $1.flightNumber }
         default:
