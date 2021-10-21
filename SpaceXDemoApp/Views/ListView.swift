@@ -68,7 +68,7 @@ extension ListView {
             Button("Name") {
                 listViewModel.sortLaunches(by: 0)
             }
-            Button("Date") {
+            Button("Date (descending)") {
                 listViewModel.sortLaunches(by: 1)
             }
             Button("Flight number") {
