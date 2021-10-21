@@ -37,14 +37,34 @@ struct ListView: View {
         .refreshable { listViewModel.downloadLaunches() }
         .searchable(text: $listViewModel.textForSearching)
         .navigationTitle("SpaceX launches")
-        .toolbar {
-            Button {
-                listViewModel.isActionSheetShown = true
-            } label: {
-                Label("Sort", systemImage: "list.number")
-            }
+        .toolbar { toolbarItem }
+        .confirmationDialog("Sort results by:", isPresented: $listViewModel.isActionSheetShown) { actionSheetItems }
+        
+    }
+    
+    
+}
+
+
+// MARK: Launches sorting
+extension ListView {
+    
+    private var launches: [LaunchModel] {
+        if listViewModel.textForSearching.isEmpty {
+            return listViewModel.launches
+        } else {
+            return listViewModel.launches.filter { $0.name.lowercased().contains(listViewModel.textForSearching.lowercased()) }
         }
-        .confirmationDialog("Sort results by:", isPresented: $listViewModel.isActionSheetShown) {
+    }
+    
+}
+
+
+// MARK: Action sheet
+extension ListView {
+    
+    var actionSheetItems: some View {
+        VStack {
             Button("Name") {
                 listViewModel.sortLaunches(by: 0)
             }
@@ -55,20 +75,19 @@ struct ListView: View {
                 listViewModel.sortLaunches(by: 2)
             }
         }
-        
     }
-    
     
 }
 
 
+// MARK: Toolbar
 extension ListView {
     
-    private var launches: [LaunchModel] {
-        if listViewModel.textForSearching.isEmpty {
-            return listViewModel.launches
-        } else {
-            return listViewModel.launches.filter { $0.name.lowercased().contains(listViewModel.textForSearching.lowercased()) }
+    var toolbarItem: some View {
+        Button {
+            listViewModel.isActionSheetShown = true
+        } label: {
+            Label("Sort", systemImage: "list.number")
         }
     }
     
