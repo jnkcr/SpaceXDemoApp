@@ -46,7 +46,7 @@ struct DetailView: View {
                 }
                 .padding()
                 .foregroundColor(.primary).colorInvert()
-                .background(Color.black)
+                .background(Color.primary)
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 
                 // Flight description:
