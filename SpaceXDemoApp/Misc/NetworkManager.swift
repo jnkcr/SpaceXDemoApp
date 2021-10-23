@@ -9,10 +9,10 @@ import Foundation
 import Alamofire
 
 
-enum LaunchesError: Error {
-    case dataCorrupted
-    case unableToParseData
-    case failedToDownloadData
+enum LaunchesError: String, Error {
+    case dataCorrupted = "Downloaded data appear to be corrupted, please try downloading launches again."
+    case unableToParseData = "Downloaded data were not processed correctly, please try downloading launches again."
+    case failedToDownloadData = "Unable to download data from server, please try downloading launches again."
 }
 
 

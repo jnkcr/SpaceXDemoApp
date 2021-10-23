@@ -18,6 +18,9 @@ final class ListViewModel: ObservableObject {
     @Published var textForSearching: String = ""
     @Published var isActionSheetShown: Bool = false
     
+    @Published var isAlertShown: Bool = false
+    var alertText: String = ""
+    
     private let networkManager: NetworkManager = NetworkManager()
     
     
@@ -33,17 +36,13 @@ final class ListViewModel: ObservableObject {
 extension ListViewModel {
     
     func downloadLaunches() {
-//        networkManager.downloadPastLaunches { launches in
-//            guard let newLaunches = launches else { return }
-//            self.launches = self.sortLaunches(newLaunches)
-//        }
-        
         networkManager.downloadPastLaunches { result in
             switch result {
             case .success(let data):
                 self.launches = data
-            case .failure(_):
-                print("Blabla") // placeholder
+            case .failure(let error):
+                self.alertText = error.rawValue
+                self.isAlertShown.toggle()
             }
         }
     }
