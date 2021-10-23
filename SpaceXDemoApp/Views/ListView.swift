@@ -28,7 +28,10 @@ struct ListView: View {
                 .listRowSeparator(.hidden)
             } else {
                 ForEach(launches) { launch in
-                    ListCell(launch: launch)
+                    NavigationLink(destination: DetailView(launch: launch)) {
+                        ListCell(launch: launch)
+                            .padding(.vertical, 5)
+                    }
                 }
                 .listRowSeparator(.hidden)
             }
