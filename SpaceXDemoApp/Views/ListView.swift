@@ -17,26 +17,32 @@ struct ListView: View {
     
     var body: some View {
         
-        List {
-            if listViewModel.launches.isEmpty {
-                HStack {
-                    ProgressView()
-                        .padding(.trailing)
-                    Text("Downloading launches..")
-                    Spacer()
-                }
-                .listRowSeparator(.hidden)
-            } else {
-                ForEach(launches) { launch in
-                    NavigationLink(destination: DetailView(detailViewModel: DetailViewModel(launch: launch))) {
-                        ListCell(launch: launch)
-                            .padding(.vertical, 5)
+        ZStack(alignment: .bottom) {
+            List {
+                Text("# of launches: \(listViewModel.launches.count)")
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+                    .listRowSeparator(.hidden)
+                if listViewModel.launches.isEmpty {
+                    Text("No data to show yet")
+                        .listRowSeparator(.hidden)
+                } else {
+                    ForEach(launches) { launch in
+                        NavigationLink(destination: DetailView(detailViewModel: DetailViewModel(launch: launch))) {
+                            ListCell(launch: launch)
+                                .padding(.vertical, 5)
+                        }
                     }
+                    .listRowSeparator(.hidden)
                 }
-                .listRowSeparator(.hidden)
+                
             }
+            .listStyle(.plain)
+            
+            DownloadingLaunchesPopUp()
+                .padding()
+                .offset(x: 0, y: listViewModel.isDownloadingPopUpVisible ? 0 : 150)
         }
-        .listStyle(.plain)
         .refreshable { listViewModel.downloadLaunches() }
         .searchable(text: $listViewModel.textForSearching)
         .navigationTitle("SpaceX launches")

@@ -21,6 +21,8 @@ final class ListViewModel: ObservableObject {
     @Published var isAlertShown: Bool = false
     var alertText: String = ""
     
+    @Published var isDownloadingPopUpVisible: Bool = false
+    
     private let networkManager: NetworkManager = NetworkManager()
     
     
@@ -36,10 +38,18 @@ final class ListViewModel: ObservableObject {
 extension ListViewModel {
     
     func downloadLaunches() {
+        withAnimation(.easeOut(duration: 0.1)) {
+            isDownloadingPopUpVisible = true
+        }
+        
+        
         networkManager.downloadPastLaunches { result in
             switch result {
             case .success(let data):
                 self.launches = data
+                withAnimation(.easeIn(duration: 0.3)) {
+                    self.isDownloadingPopUpVisible = false
+                }
             case .failure(let error):
                 self.alertText = error.rawValue
                 self.isAlertShown.toggle()
