@@ -13,7 +13,14 @@ struct DetailView: View {
     
     var body: some View {
         
-        Text(launch.name)
+        VStack {
+            Text("Name: \(launch.name)")
+            Text("Date: \(launch.dateLocal.formatted())")
+            Text("Number: \(launch.flightNumber)")
+            
+        }
+        .navigationTitle("Launch")
+        .navigationBarTitleDisplayMode(.inline)
         
     }
     
