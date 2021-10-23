@@ -9,14 +9,14 @@ import SwiftUI
 
 struct DetailView: View {
     
-    let launch: LaunchModel
+    let detailViewModel: DetailViewModel
     
     var body: some View {
         
         VStack {
-            Text("Name: \(launch.name)")
-            Text("Date: \(launch.dateLocal.formatted())")
-            Text("Number: \(launch.flightNumber)")
+            Text("Name: \(detailViewModel.launch.name)")
+            Text("Date: \(detailViewModel.launch.dateLocal.formatted())")
+            Text("Number: \(detailViewModel.launch.flightNumber)")
             
         }
         .navigationTitle("Launch")
