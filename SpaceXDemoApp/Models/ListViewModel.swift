@@ -33,9 +33,18 @@ final class ListViewModel: ObservableObject {
 extension ListViewModel {
     
     func downloadLaunches() {
-        networkManager.downloadPastLaunches { launches in
-            guard let newLaunches = launches else { return }
-            self.launches = self.sortLaunches(newLaunches)
+//        networkManager.downloadPastLaunches { launches in
+//            guard let newLaunches = launches else { return }
+//            self.launches = self.sortLaunches(newLaunches)
+//        }
+        
+        networkManager.downloadPastLaunches { result in
+            switch result {
+            case .success(let data):
+                self.launches = data
+            case .failure(_):
+                print("Blabla") // placeholder
+            }
         }
     }
     
