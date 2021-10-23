@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 extension String {
@@ -20,6 +21,16 @@ extension String {
         guard let date = formatter.date(from: self) else { return "n/a" }
         
         return date.formatted(date: dateFormat, time: timeFormat)
+    }
+    
+}
+
+extension Text {
+    
+    func sectionHeaderStyle() -> some View {
+        self
+            .font(.headline)
+            .padding(.bottom, 5)
     }
     
 }

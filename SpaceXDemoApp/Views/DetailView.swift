@@ -52,16 +52,14 @@ struct DetailView: View {
                 // Flight description:
                 VStack(alignment: .leading) {
                     Text("Flight details:")
-                        .font(.headline)
-                        .padding(.bottom, 5)
+                        .sectionHeaderStyle()
                     Text(detailViewModel.flightDetails)
                 }
                 
                 // Images:
                 VStack(alignment: .leading) {
                     Text("Images:")
-                        .font(.headline)
-                        .padding(.bottom, 5)
+                        .sectionHeaderStyle()
                     
                     if detailViewModel.imageURLs.isNotEmpty {
                         ScrollView(.horizontal, showsIndicators: false) {
