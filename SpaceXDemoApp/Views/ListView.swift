@@ -46,7 +46,7 @@ struct ListView: View {
 }
 
 
-// MARK: Launches sorting
+// MARK: Launches filtering
 extension ListView {
     
     private var launches: [LaunchModel] {
@@ -94,6 +94,7 @@ extension ListView {
 }
 
 
+// MARK: Previews
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()
