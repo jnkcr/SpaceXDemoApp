@@ -42,6 +42,7 @@ struct ListView: View {
         .navigationTitle("SpaceX launches")
         .toolbar { toolbarItem }
         .confirmationDialog("Sort results by:", isPresented: $listViewModel.isActionSheetShown) { actionSheetItems }
+        .alert(isPresented: $listViewModel.isAlertShown) { alertItem }
         
     }
     
@@ -78,6 +79,16 @@ extension ListView {
                 listViewModel.sortLaunches(by: 2)
             }
         }
+    }
+    
+}
+
+
+// MARK: Alert
+extension ListView {
+    
+    var alertItem: Alert {
+        Alert(title: Text("Warning"), message: Text(listViewModel.alertText), dismissButton: .default(Text("Done")))
     }
     
 }
