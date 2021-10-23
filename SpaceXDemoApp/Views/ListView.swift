@@ -67,7 +67,7 @@ extension ListView {
 // MARK: Action sheet
 extension ListView {
     
-    var actionSheetItems: some View {
+    private var actionSheetItems: some View {
         VStack {
             Button("Name") {
                 listViewModel.sortLaunches(by: 0)
@@ -87,7 +87,7 @@ extension ListView {
 // MARK: Alert
 extension ListView {
     
-    var alertItem: Alert {
+    private var alertItem: Alert {
         Alert(title: Text("Warning"), message: Text(listViewModel.alertText), dismissButton: .default(Text("Done")))
     }
     
@@ -97,7 +97,7 @@ extension ListView {
 // MARK: Toolbar
 extension ListView {
     
-    var toolbarItem: some View {
+    private var toolbarItem: some View {
         Button {
             listViewModel.isActionSheetShown = true
         } label: {
