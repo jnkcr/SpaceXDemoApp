@@ -37,6 +37,7 @@ final class ListViewModel: ObservableObject {
 // MARK: Downloading launches
 extension ListViewModel {
     
+    /// Downloads all past launches
     func downloadLaunches() {
         withAnimation(.easeOut(duration: 0.1)) {
             isDownloadingPopUpVisible = true
@@ -64,6 +65,7 @@ extension ListViewModel {
 extension ListViewModel {
     
     func sortLaunches(by key: Int) {
+        // Should be better to sort via enum
         sortingOrder = key
         launches = sortLaunches(launches)
     }
@@ -71,11 +73,11 @@ extension ListViewModel {
     private func sortLaunches(_ givenLaunches: [LaunchModel]) -> [LaunchModel] {
         switch sortingOrder {
         case 1:
-            return givenLaunches.sorted { $0.dateUTC > $1.dateUTC }
+            return givenLaunches.sorted { $0.dateUTC > $1.dateUTC } // Date descending
         case 2:
-            return givenLaunches.sorted { $0.flightNumber < $1.flightNumber }
+            return givenLaunches.sorted { $0.flightNumber < $1.flightNumber } // Flight number
         default:
-            return givenLaunches.sorted { $0.name < $1.name }
+            return givenLaunches.sorted { $0.name < $1.name } // Name
         }
     }
     
