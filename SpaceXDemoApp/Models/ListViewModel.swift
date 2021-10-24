@@ -37,21 +37,23 @@ final class ListViewModel: ObservableObject {
 // MARK: Downloading launches
 extension ListViewModel {
     
-    /// Downloads all past launches
+    /// Downloads all past launches and loads them to viewmodel
     func downloadLaunches() {
+        // Show popup first as visual clue to user
         withAnimation(.easeOut(duration: 0.1)) {
             isDownloadingPopUpVisible = true
         }
-        
-        
+        // Attempt to download data
         networkManager.downloadPastLaunches { result in
             switch result {
             case .success(let data):
+                // Load downloaded data to viewmodel and hide popup
                 self.launches = data
                 withAnimation(.easeIn(duration: 0.3)) {
                     self.isDownloadingPopUpVisible = false
                 }
             case .failure(let error):
+                // Trigger alert with error message
                 self.alertText = error.rawValue
                 self.isAlertShown.toggle()
             }
@@ -64,8 +66,10 @@ extension ListViewModel {
 // MARK: Sorting launches
 extension ListViewModel {
     
+    /// Sorts undelying data by given key
+    /// - Parameter key: key represented by Int (0 - name, 1 - date, 2 - flight num.)
     func sortLaunches(by key: Int) {
-        // Should be better to sort via enum
+        // Better to sort via enum
         sortingOrder = key
         launches = sortLaunches(launches)
     }

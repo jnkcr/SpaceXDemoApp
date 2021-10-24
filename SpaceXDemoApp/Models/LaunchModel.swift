@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// MARK: - LaunchModel
 struct LaunchModel: Codable, Identifiable {
     let id: String
     let name: String
@@ -49,6 +49,7 @@ struct LaunchModel: Codable, Identifiable {
     }
 }
 
+// MARK: - DatePrecision
 enum DatePrecision: String, Codable {
     case half
     case quarter
@@ -58,17 +59,20 @@ enum DatePrecision: String, Codable {
     case hour
 }
 
+// MARK: - Failures
 struct Failures: Codable {
     let time: Int?
     let altitude: Int?
     let reason: String?
 }
 
+// MARK: - Crew
 struct Crew: Codable {
     let crew: String?
     let role: String?
 }
 
+// MARK: - Core
 struct Core: Codable {
     let core: String?
     let flight: Int?
@@ -88,6 +92,7 @@ struct Core: Codable {
     }
 }
 
+// MARK: - Links
 struct Links: Codable {
     let patch: Patch
     let reddit: Reddit
@@ -104,11 +109,13 @@ struct Links: Codable {
     }
 }
 
+// MARK: - Patch
 struct Patch: Codable {
     let small: String?
     let large: String?
 }
 
+// MARK: - Reddit
 struct Reddit: Codable {
     let campaign: String?
     let launch: String?
@@ -116,11 +123,13 @@ struct Reddit: Codable {
     let recovery: String?
 }
 
+// MARK: - Flickr
 struct Flickr: Codable {
     let small: [String?]
     let original: [String?]
 }
 
+// MARK: - Fairings
 struct Fairings: Codable {
     let reused: Bool?
     let recovery_attempt: Bool?

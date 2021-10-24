@@ -8,6 +8,6 @@
 import Foundation
 
 
-enum URLaddresses: String {
-    case allPastLaunches = "https://api.spacexdata.com/v5/launches/past"
+enum URLaddresses {
+    static let allPastLaunches: String = "https://api.spacexdata.com/v5/launches/past"
 }
