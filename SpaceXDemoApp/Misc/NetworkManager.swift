@@ -14,7 +14,7 @@ final class NetworkManager {
     /// Downloads all past launches from given api URL
     func downloadPastLaunches(completion: @escaping (Result<[LaunchModel], LaunchesError>) -> Void) {
         
-        AF.request("https://api.spacexdata.com/v5/launches/past", method: .get).responseData { response in
+        AF.request(URLaddresses.allPastLaunches.rawValue, method: .get).responseData { response in
             switch response.result {
             case .success(let data):
                 // Early check - downloaded data should not be empty

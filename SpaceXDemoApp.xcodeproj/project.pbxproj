@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42C5DA22725A3AE004903A3 /* URLaddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C5DA12725A3AE004903A3 /* URLaddresses.swift */; };
 		F4599B622718B12300932208 /* SpaceXDemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */; };
 		F4599B662718B12400932208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4599B652718B12400932208 /* Assets.xcassets */; };
 		F4599B692718B12400932208 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4599B682718B12400932208 /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F42C5DA12725A3AE004903A3 /* URLaddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLaddresses.swift; sourceTree = "<group>"; };
 		F4599B5E2718B12300932208 /* SpaceXDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppApp.swift; sourceTree = "<group>"; };
 		F4599B652718B12400932208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				F4F44BDE271B32690067C187 /* NetworkManager.swift */,
 				F488530E2721F4BE005C28FD /* CustomExtensions.swift */,
 				F488531427249827005C28FD /* Errors.swift */,
+				F42C5DA12725A3AE004903A3 /* URLaddresses.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				F488530D2721D3F2005C28FD /* ListCell.swift in Sources */,
 				F4F44BDB271B1F190067C187 /* ListViewModel.swift in Sources */,
 				F48853172724999B005C28FD /* DownloadingLaunchesPopUp.swift in Sources */,
+				F42C5DA22725A3AE004903A3 /* URLaddresses.swift in Sources */,
 				F4599B8F2718B7A900932208 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
