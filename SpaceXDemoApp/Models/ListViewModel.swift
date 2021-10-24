@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Alamofire
 
 
 final class ListViewModel: ObservableObject {
