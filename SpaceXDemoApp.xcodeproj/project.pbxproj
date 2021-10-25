@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42C5DA22725A3AE004903A3 /* URLaddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C5DA12725A3AE004903A3 /* URLaddresses.swift */; };
 		F4599B622718B12300932208 /* SpaceXDemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */; };
-		F4599B642718B12300932208 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B632718B12300932208 /* ContentView.swift */; };
 		F4599B662718B12400932208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4599B652718B12400932208 /* Assets.xcassets */; };
 		F4599B692718B12400932208 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4599B682718B12400932208 /* Preview Assets.xcassets */; };
-		F4599B732718B12400932208 /* SpaceXDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B722718B12400932208 /* SpaceXDemoAppTests.swift */; };
 		F4599B7D2718B12400932208 /* SpaceXDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B7C2718B12400932208 /* SpaceXDemoAppUITests.swift */; };
 		F4599B7F2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */; };
+		F4599B8D2718B42700932208 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4599B8C2718B42700932208 /* Alamofire */; };
+		F4599B8F2718B7A900932208 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4599B8E2718B7A900932208 /* ListView.swift */; };
+		F488530D2721D3F2005C28FD /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488530C2721D3F2005C28FD /* ListCell.swift */; };
+		F488530F2721F4BE005C28FD /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488530E2721F4BE005C28FD /* CustomExtensions.swift */; };
+		F488531127241641005C28FD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488531027241641005C28FD /* DetailView.swift */; };
+		F488531327242EF1005C28FD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488531227242EF1005C28FD /* DetailViewModel.swift */; };
+		F488531527249827005C28FD /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488531427249827005C28FD /* Errors.swift */; };
+		F48853172724999B005C28FD /* DownloadingLaunchesPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48853162724999B005C28FD /* DownloadingLaunchesPopUp.swift */; };
+		F4AC4EE22726EAB800600209 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC4EE12726EAB800600209 /* ExtensionsTests.swift */; };
+		F4AC4EE42726F77D00600209 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC4EE32726F77D00600209 /* ModelTests.swift */; };
+		F4F44BD9271ACFC10067C187 /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F44BD8271ACFC10067C187 /* LaunchModel.swift */; };
+		F4F44BDB271B1F190067C187 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F44BDA271B1F190067C187 /* ListViewModel.swift */; };
+		F4F44BDF271B32690067C187 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F44BDE271B32690067C187 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +46,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F42C5DA12725A3AE004903A3 /* URLaddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLaddresses.swift; sourceTree = "<group>"; };
 		F4599B5E2718B12300932208 /* SpaceXDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppApp.swift; sourceTree = "<group>"; };
-		F4599B632718B12300932208 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4599B652718B12400932208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4599B682718B12400932208 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4599B6E2718B12400932208 /* SpaceXDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4599B722718B12400932208 /* SpaceXDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppTests.swift; sourceTree = "<group>"; };
 		F4599B782718B12400932208 /* SpaceXDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4599B7C2718B12400932208 /* SpaceXDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppUITests.swift; sourceTree = "<group>"; };
 		F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4599B8E2718B7A900932208 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		F488530C2721D3F2005C28FD /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		F488530E2721F4BE005C28FD /* CustomExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
+		F488531027241641005C28FD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F488531227242EF1005C28FD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F488531427249827005C28FD /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		F48853162724999B005C28FD /* DownloadingLaunchesPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingLaunchesPopUp.swift; sourceTree = "<group>"; };
+		F4AC4EE12726EAB800600209 /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
+		F4AC4EE32726F77D00600209 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		F4F44BD8271ACFC10067C187 /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
+		F4F44BDA271B1F190067C187 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		F4F44BDE271B32690067C187 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4599B8D2718B42700932208 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				F4599B612718B12300932208 /* SpaceXDemoAppApp.swift */,
-				F4599B632718B12300932208 /* ContentView.swift */,
+				F4F44BDD271B2BF50067C187 /* Views */,
+				F4F44BDC271B2BE60067C187 /* Models */,
+				F4F44BE0271B489E0067C187 /* Misc */,
 				F4599B652718B12400932208 /* Assets.xcassets */,
 				F4599B672718B12400932208 /* Preview Content */,
 			);
@@ -113,7 +139,8 @@
 		F4599B712718B12400932208 /* SpaceXDemoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4599B722718B12400932208 /* SpaceXDemoAppTests.swift */,
+				F4AC4EE12726EAB800600209 /* ExtensionsTests.swift */,
+				F4AC4EE32726F77D00600209 /* ModelTests.swift */,
 			);
 			path = SpaceXDemoAppTests;
 			sourceTree = "<group>";
@@ -125,6 +152,38 @@
 				F4599B7E2718B12400932208 /* SpaceXDemoAppUITestsLaunchTests.swift */,
 			);
 			path = SpaceXDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		F4F44BDC271B2BE60067C187 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4F44BDA271B1F190067C187 /* ListViewModel.swift */,
+				F488531227242EF1005C28FD /* DetailViewModel.swift */,
+				F4F44BD8271ACFC10067C187 /* LaunchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4F44BDD271B2BF50067C187 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4599B8E2718B7A900932208 /* ListView.swift */,
+				F488530C2721D3F2005C28FD /* ListCell.swift */,
+				F488531027241641005C28FD /* DetailView.swift */,
+				F48853162724999B005C28FD /* DownloadingLaunchesPopUp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4F44BE0271B489E0067C187 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				F4F44BDE271B32690067C187 /* NetworkManager.swift */,
+				F488530E2721F4BE005C28FD /* CustomExtensions.swift */,
+				F488531427249827005C28FD /* Errors.swift */,
+				F42C5DA12725A3AE004903A3 /* URLaddresses.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +202,9 @@
 			dependencies = (
 			);
 			name = SpaceXDemoApp;
+			packageProductDependencies = (
+				F4599B8C2718B42700932208 /* Alamofire */,
+			);
 			productName = SpaceXDemoApp;
 			productReference = F4599B5E2718B12300932208 /* SpaceXDemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +277,9 @@
 				Base,
 			);
 			mainGroup = F4599B552718B12300932208;
+			packageReferences = (
+				F4599B8B2718B42700932208 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F4599B5F2718B12300932208 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +322,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4599B642718B12300932208 /* ContentView.swift in Sources */,
+				F488530F2721F4BE005C28FD /* CustomExtensions.swift in Sources */,
+				F488531127241641005C28FD /* DetailView.swift in Sources */,
+				F4F44BD9271ACFC10067C187 /* LaunchModel.swift in Sources */,
 				F4599B622718B12300932208 /* SpaceXDemoAppApp.swift in Sources */,
+				F488531327242EF1005C28FD /* DetailViewModel.swift in Sources */,
+				F4F44BDF271B32690067C187 /* NetworkManager.swift in Sources */,
+				F488531527249827005C28FD /* Errors.swift in Sources */,
+				F488530D2721D3F2005C28FD /* ListCell.swift in Sources */,
+				F4F44BDB271B1F190067C187 /* ListViewModel.swift in Sources */,
+				F48853172724999B005C28FD /* DownloadingLaunchesPopUp.swift in Sources */,
+				F42C5DA22725A3AE004903A3 /* URLaddresses.swift in Sources */,
+				F4599B8F2718B7A900932208 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +341,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4599B732718B12400932208 /* SpaceXDemoAppTests.swift in Sources */,
+				F4AC4EE22726EAB800600209 /* ExtensionsTests.swift in Sources */,
+				F4AC4EE42726F77D00600209 /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +501,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,7 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,9 +532,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +545,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -480,7 +558,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A2VMHWG242;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +583,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A2VMHWG242;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +685,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4599B8B2718B42700932208 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4599B8C2718B42700932208 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4599B8B2718B42700932208 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4599B562718B12300932208 /* Project object */;
 }
