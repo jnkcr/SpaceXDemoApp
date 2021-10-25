@@ -29,6 +29,10 @@ final class ListViewModel: ObservableObject {
         downloadLaunches()
     }
     
+    init(with launchData: [LaunchModel]) {
+        launches = launchData
+    }
+    
     
 }
 
