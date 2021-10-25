@@ -51,7 +51,7 @@ extension ListViewModel {
             switch result {
             case .success(let data):
                 // Load downloaded data to viewmodel and hide popup
-                self.launches = data
+                self.launches = self.sortLaunches(data)
                 withAnimation(.easeIn(duration: 0.3)) {
                     self.isDownloadingPopUpVisible = false
                 }
